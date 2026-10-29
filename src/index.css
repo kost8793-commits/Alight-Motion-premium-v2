@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #161616;
+  --paper: #fffdf5;
+  --yellow: #ffde59;
+  --pink: #ff77b7;
+  --blue: #74c9ff;
+  --green: #79e28d;
+  --purple: #b9a3ff;
+  --white: #ffffff;
+  --red: #ff7676;
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-sm: 4px 4px 0 var(--ink);
+  --shadow-lg: 8px 8px 0 var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--paper);
+  background-image: linear-gradient(rgba(17, 17, 17, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Eliminate 300ms mobile tap delay and prevent double-tap zoom on buttons */
+button, input, select, textarea, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Neo-Brutalist Utility Classes */
+.neo-border {
+  border: 3px solid var(--ink);
+}
+
+.neo-border-2 {
+  border: 2px solid var(--ink);
+}
+
+.neo-shadow {
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.neo-shadow-sm {
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.neo-shadow-lg {
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.neo-btn {
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Restrict hover movement strictly to real mouse pointers so touch screens don't require 2 taps! */
+@media (hover: hover) and (pointer: fine) {
+  .neo-btn:hover:not(:disabled) {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+}
+
+.neo-btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper);
+  border-left: 2px solid var(--ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+  border: 2px solid var(--ink);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink);
+}

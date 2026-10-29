@@ -1,0 +1,6 @@
+{
+  "name": "Alight Premium Tool",
+  "description": "Menu AM Prem untuk kirim dan verifikasi link Alight Motion Premium dengan antarmuka neobrutalist dan integrasi API proxy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
